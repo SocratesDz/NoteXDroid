@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
+using Android.Views;
 
 namespace NotexDroid.Core.Droid
 {
@@ -23,6 +24,12 @@ namespace NotexDroid.Core.Droid
 
 			listView = (ListView) FindViewById(Resource.Id.noteList);
 			listView.Adapter = adapter;
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.menu, menu);
+			return base.OnCreateOptionsMenu(menu);
 		}
 	}
 }

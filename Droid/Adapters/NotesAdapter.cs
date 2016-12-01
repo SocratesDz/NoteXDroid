@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
+using Android.Content;
+using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
@@ -54,7 +56,9 @@ namespace NotexDroid.Core.Droid
 			view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = note.Title;
 
 			view.Click += delegate {
-				Toast.MakeText(context, note.Content, ToastLength.Long).Show();
+				Intent detailIntent = new Intent(context, typeof(NoteDetailActivity));
+				detailIntent.PutExtra(Constants.NOTE_DETAIL_INTENT, note.Id);
+				context.StartActivity(detailIntent);
 			};
 
 			return view;

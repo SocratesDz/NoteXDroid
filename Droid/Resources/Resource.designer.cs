@@ -41,11 +41,36 @@ namespace NotexDroid.Core.Droid
 			}
 		}
 		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int add_circle_outline_black = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int noteList = 2131034112;
+			// aapt resource value: 0x7f070003
+			public const int add = 2131165187;
+			
+			// aapt resource value: 0x7f070002
+			public const int content_textview = 2131165186;
+			
+			// aapt resource value: 0x7f070000
+			public const int noteList = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int title_textview = 2131165185;
 			
 			static Id()
 			{
@@ -60,8 +85,11 @@ namespace NotexDroid.Core.Droid
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int Main = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int NoteDetail = 2130968577;
 			
 			static Layout()
 			{
@@ -73,11 +101,27 @@ namespace NotexDroid.Core.Droid
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int menu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			// aapt resource value: 0x7f030000
+			public const int Icon = 2130903040;
 			
 			static Mipmap()
 			{
@@ -92,11 +136,17 @@ namespace NotexDroid.Core.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f050003
+			public const int add_option_menu = 2131034115;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f050001
+			public const int app_name = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int hello = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int title_label = 2131034114;
 			
 			static String()
 			{

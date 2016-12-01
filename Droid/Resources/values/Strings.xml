@@ -2,4 +2,6 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">NotexDroid.Core.Droid</string>
+	<string name="title_label">Título</string>
+	<string name="add_option_menu">Agregar</string>
 </resources>
