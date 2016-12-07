@@ -4,4 +4,5 @@
 	<string name="app_name">NotexDroid.Core.Droid</string>
 	<string name="title_label">Título</string>
 	<string name="add_option_menu">Agregar</string>
+	<string name="login_option_menu">Login</string>
 </resources>

@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:id="@+id/add"
+	<item android:id="@+id/add_menu"
 		android:icon="@drawable/add_circle_outline_black"
 		android:title="@string/add_option_menu"
 		android:showAsAction="always"/>
+	<item android:id="@+id/login_menu"
+		android:title="@string/login_option_menu"
+		android:showAsAction="never" />
 </menu>

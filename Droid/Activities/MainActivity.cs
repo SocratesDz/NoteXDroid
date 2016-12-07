@@ -4,6 +4,7 @@ using Android.OS;
 using System.Collections.Generic;
 using Android.Views;
 using System.Threading.Tasks;
+using Android.Content;
 
 namespace NotexDroid.Core.Droid
 {
@@ -48,6 +49,22 @@ namespace NotexDroid.Core.Droid
 		{
 			MenuInflater.Inflate(Resource.Menu.menu, menu);
 			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId) 
+			{
+				case Resource.Id.login_menu:
+					// Login with Google
+					//Intent intent = new Intent(this, typeof(NoteDetailActivity));
+					break;
+				case Resource.Id.add_menu:
+					// Call NoteDetailActivity
+					break;
+			}
+
+			return base.OnOptionsItemSelected(item);
 		}
 	}
 }

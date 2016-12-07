@@ -61,10 +61,13 @@ namespace NotexDroid.Core.Droid
 		{
 			
 			// aapt resource value: 0x7f070004
-			public const int add = 2131165188;
+			public const int add_menu = 2131165188;
 			
 			// aapt resource value: 0x7f070003
 			public const int content_textview = 2131165187;
+			
+			// aapt resource value: 0x7f070005
+			public const int login_menu = 2131165189;
 			
 			// aapt resource value: 0x7f070001
 			public const int noteList = 2131165185;
@@ -147,6 +150,9 @@ namespace NotexDroid.Core.Droid
 			
 			// aapt resource value: 0x7f050000
 			public const int hello = 2131034112;
+			
+			// aapt resource value: 0x7f050004
+			public const int login_option_menu = 2131034116;
 			
 			// aapt resource value: 0x7f050002
 			public const int title_label = 2131034114;
