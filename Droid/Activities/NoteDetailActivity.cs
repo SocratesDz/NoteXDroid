@@ -27,8 +27,8 @@ namespace NotexDroid.Core.Droid
 			titleEdit = FindViewById<EditText>(Resource.Id.title_textview);
 			contentEdit = FindViewById<EditText>(Resource.Id.content_textview);
 
-			var idValue = Intent.GetIntExtra(Constants.NOTE_DETAIL_INTENT, Constants.INTENT_DEFAULT_VALUE);
-			if (idValue != Constants.INTENT_DEFAULT_VALUE)
+			var idValue = Intent.GetStringExtra(Constants.NOTE_DETAIL_INTENT);
+			if (String.IsNullOrEmpty(idValue))
 			{
 				var notes = service.Notes();
 				note = notes.Find(n => n.Id == idValue);

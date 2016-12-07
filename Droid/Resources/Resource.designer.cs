@@ -60,17 +60,20 @@ namespace NotexDroid.Core.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070004
+			public const int add = 2131165188;
+			
 			// aapt resource value: 0x7f070003
-			public const int add = 2131165187;
-			
-			// aapt resource value: 0x7f070002
-			public const int content_textview = 2131165186;
-			
-			// aapt resource value: 0x7f070000
-			public const int noteList = 2131165184;
+			public const int content_textview = 2131165187;
 			
 			// aapt resource value: 0x7f070001
-			public const int title_textview = 2131165185;
+			public const int noteList = 2131165185;
+			
+			// aapt resource value: 0x7f070000
+			public const int progressbar = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int title_textview = 2131165186;
 			
 			static Id()
 			{

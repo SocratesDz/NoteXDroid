@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using Android.Views;
+using System.Threading.Tasks;
 
 namespace NotexDroid.Core.Droid
 {
@@ -11,6 +12,7 @@ namespace NotexDroid.Core.Droid
 	{
 		NotesAdapter adapter;
 		ListView listView;
+		ProgressBar progressBar;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -19,11 +21,27 @@ namespace NotexDroid.Core.Droid
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			var service = new MockNoteService();
-			adapter = new NotesAdapter(this, service.Notes());
+			var service = new AzureNotesService();
+			adapter = new NotesAdapter(this);
 
 			listView = (ListView) FindViewById(Resource.Id.noteList);
 			listView.Adapter = adapter;
+
+			listView.Visibility = ViewStates.Gone;
+
+			progressBar = FindViewById<ProgressBar>(Resource.Id.progressbar);
+			progressBar.Indeterminate = true;
+
+
+			RunOnUiThread(async () => { 
+				var notes = await service.GetNotes();
+				adapter.SetNotes(notes);
+
+				progressBar.Indeterminate = false;
+				progressBar.Visibility = ViewStates.Gone;
+				listView.Visibility = ViewStates.Visible;
+			});
+
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)

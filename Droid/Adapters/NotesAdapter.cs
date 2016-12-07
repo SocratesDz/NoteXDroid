@@ -63,5 +63,12 @@ namespace NotexDroid.Core.Droid
 
 			return view;
 		}
+
+		public void SetNotes(IEnumerable<Note> notes)
+		{
+			data.Clear();
+			data.AddRange(notes);
+			this.NotifyDataSetChanged();
+		}
 	}
 }
