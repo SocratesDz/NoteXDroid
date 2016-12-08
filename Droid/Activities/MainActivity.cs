@@ -56,11 +56,13 @@ namespace NotexDroid.Core.Droid
 			switch (item.ItemId) 
 			{
 				case Resource.Id.login_menu:
-					// Login with Google
-					//Intent intent = new Intent(this, typeof(NoteDetailActivity));
+					// Login 
+
 					break;
 				case Resource.Id.add_menu:
 					// Call NoteDetailActivity
+					Intent intent = new Intent(this, typeof(NoteDetailActivity));
+					StartActivity(intent);
 					break;
 			}
 
